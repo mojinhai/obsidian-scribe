@@ -112,7 +112,7 @@ export class ScribeSettingsTab extends PluginSettingTab {
     this.reactRoot.render(<ScribeSettings plugin={this.plugin} />);
 
     new Setting(containerEl).addButton((button) => {
-      button.setButtonText('Reset to default');
+      button.setButtonText('重置为默认');
       button.onClick(async () => {
         this.plugin.settings = {
           ...DEFAULT_SETTINGS,
@@ -179,7 +179,7 @@ const ScribeSettings: React.FC<{ plugin: ScribePlugin }> = ({ plugin }) => {
                 />
               );
             default:
-              return <span>No tab selected</span>;
+              return <span>未选择标签</span>;
           }
         })()}
       </div>
@@ -195,15 +195,15 @@ enum SettingsTabsId {
 
 const settingsTabs = [
   {
-    name: 'General',
+    name: '通用',
     id: SettingsTabsId.GENERAL,
   },
   {
-    name: 'AI Providers',
+    name: 'AI 提供商',
     id: SettingsTabsId.AI_PROVIDERS,
   },
   {
-    name: 'Templates',
+    name: '模板',
     id: SettingsTabsId.TEMPLATES,
   },
 ];
