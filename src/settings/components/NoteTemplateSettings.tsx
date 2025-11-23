@@ -24,16 +24,16 @@ export const DEFAULT_TEMPLATE: ScribeTemplate = {
     {
       id: '1',
       sectionHeader: 'Summary',
-      sectionInstructions: `A summary of the transcript in Markdown.  It will be nested under a h2 # tag, so use a tag less than that for headers
-Concise bullet points containing the primary points of the speaker`,
+      sectionInstructions: `转录内容的Markdown摘要。它将嵌套在h2标签下，所以使用小于h2的标题标签
+包含说话人主要观点的简洁要点`,
     },
     {
       id: '2',
       sectionHeader: 'Insights',
-      sectionInstructions: `Insights that you gained from the transcript in Markdown.
-A brief section, a paragraph or two on what insights and enhancements you think of
-Several bullet points on things you think would be an improvement, feel free to use headers
-It will be nested under an h2 tag, so use a tag less than that for headers
+      sectionInstructions: `从转录中获得的Markdown洞察。
+关于你认为的洞察和改进的一两个段落的简短部分
+关于改进事项的几个要点，可以自由使用标题
+它将嵌套在h2标签下，所以使用小于h2的标题标签
         `,
     },
     {
@@ -41,18 +41,18 @@ It will be nested under an h2 tag, so use a tag less than that for headers
       sectionHeader: 'Mermaid Chart',
       sectionOutputPrefix: '```mermaid',
       sectionOutputPostfix: '```',
-      sectionInstructions: `A valid unicode mermaid chart that shows a concept map consisting of both what insights you had along with what the speaker said for the mermaid chart, 
-Dont wrap it in anything, just output the mermaid chart.  
-Do not use any special characters that arent letters in the nodes text, particularly new lines, tabs, or special characters like apostraphes or quotes or commas`,
+      sectionInstructions: `一个有效的unicode mermaid图表，显示概念地图，包括你获得的洞察以及说话人所说的话，
+不要用任何东西包装它，只输出mermaid图表。
+在节点文本中不要使用不是字母的特殊字符，特别是换行符、制表符或特殊字符如撇号、引号或逗号`,
     },
     {
       id: '4',
       sectionHeader: 'Answered Questions',
       isSectionOptional: true,
-      sectionInstructions: `If the user says "Hey Scribe" or alludes to you, asking you to do something, answer the question or do the ask and put the answers here
-Put the text in markdown, it will be nested under an h2 tag, so use a tag less than that for headers
-Summarize the question in a short sentence as a header and place your reply nicely below for as many questions as there are
-Answer their questions in a clear and concise manner`,
+      sectionInstructions: `如果用户说"Hey Scribe"或暗示你，要求你做某事，回答问题或执行请求并将答案放在这里
+将文本放在markdown中，它将嵌套在h2标签下，所以使用小于h2的标题标签
+用一个简短的句子作为标题总结问题，并在下面整齐地放置你的回复，对于有多少问题就做多少
+以清晰简洁的方式回答他们的问题`,
     },
   ],
 };
