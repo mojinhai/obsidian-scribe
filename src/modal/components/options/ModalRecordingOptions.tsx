@@ -49,7 +49,7 @@ export function ModalRecordingOptions({
             });
           }}
         />
-        Append to active file
+        追加到活动文件
       </label>
 
       <label>
@@ -62,7 +62,7 @@ export function ModalRecordingOptions({
             });
           }}
         />
-        Only transcribe recording
+        仅转录录音
       </label>
       <label>
         <input
@@ -74,7 +74,7 @@ export function ModalRecordingOptions({
             });
           }}
         />
-        Save audio file
+        保存音频文件
       </label>
 
       {transcriptPlatform === TRANSCRIPT_PLATFORM.assemblyAi && (
@@ -88,12 +88,12 @@ export function ModalRecordingOptions({
               });
             }}
           />
-          Multi-speaker enabled
+          启用多说话人
         </label>
       )}
 
       <SettingsItem
-        name="Active template"
+        name="活动模板"
         description=""
         control={
           <select
