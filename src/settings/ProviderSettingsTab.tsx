@@ -10,17 +10,17 @@ function ProviderSettingsTab() {
 
   return (
     <div>
-      <SettingsItemHeader name="API keys" />
+      <SettingsItemHeader name="API 密钥" />
       <SettingsInput
         {...register('openAiApiKey')}
-        name="OpenAI API key"
-        description="You can find this in your OpenAI dev console - https://platform.openai.com/settings"
+        name="OpenAI API 密钥"
+        description="您可以在OpenAI开发者控制台找到此密钥 - https://platform.openai.com/settings"
         placeholder="sk-..."
       />
       <SettingsInput
         {...register('assemblyAiApiKey')}
-        name="AssemblyAI API key"
-        description="You can find this in your AssemblyAI dev console - https://www.assemblyai.com/app/account"
+        name="AssemblyAI API 密钥"
+        description="您可以在AssemblyAI开发者控制台找到此密钥 - https://www.assemblyai.com/app/account"
         placeholder="c3p0..."
       />
     </div>
