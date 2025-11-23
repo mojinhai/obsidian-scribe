@@ -1,9 +1,9 @@
 {
 	"id": "scribe",
-	"name": "Scribe",
+	"name": "抄写员",
 	"version": "2.2.0",
 	"minAppVersion": "0.15.0",
-	"description": "Record, transcribe, and transform voice notes into structured insights. Leverage Whisper or AssemblyAI and ChatGPT to fill in gaps, generate summaries, and visualize ideas — all seamlessly integrated within Obsidian.",
+	"description": "记录、转录并将语音笔记转换为结构化的洞察。利用 Whisper 或 AssemblyAI 和 ChatGPT 来填补空白、生成摘要并可视化想法——全部无缝集成在 Obsidian 中。",
 	"author": "Mike Alicea",
 	"authorUrl": "https://github.com/Mikodin/",
 	"fundingUrl": "https://buymeacoffee.com/mikealicea",
