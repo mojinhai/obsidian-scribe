@@ -36,7 +36,7 @@ function AudioDeviceSettings() {
           .map((device) => ({
             deviceId: device.deviceId,
             label:
-              device.label || `Microphone (${device.deviceId.slice(0, 8)}...)`,
+              device.label || `麦克风 (${device.deviceId.slice(0, 8)}...)`,
           }));
 
         setAudioDevices(audioInputDevices);
@@ -51,12 +51,12 @@ function AudioDeviceSettings() {
   }, []);
 
   return isLoading ? (
-    <div>Loading devices...</div>
+    <div>正在加载设备...</div>
   ) : (
     <SettingsSelect
       {...register('selectedAudioDeviceId')}
-      name="Audio Input Device"
-      description="Select which microphone to use for recording"
+      name="音频输入设备"
+      description="选择用于录音的麦克风"
       valuesMapping={valuesMapping}
     />
   );
