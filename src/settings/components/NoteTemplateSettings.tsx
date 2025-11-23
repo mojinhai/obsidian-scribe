@@ -108,7 +108,7 @@ const TemplateSection: React.FC<{
   return (
     <div style={{ width: '100%' }}>
       <SettingsItem
-        name="Section Header"
+        name="部分标题"
         description=""
         control={
           <input
@@ -122,7 +122,7 @@ const TemplateSection: React.FC<{
         }
       />
 
-      <p>Section Instructions</p>
+      <p>部分说明</p>
       <textarea
         disabled={isTemplateLocked}
         value={section.sectionInstructions}
@@ -146,8 +146,8 @@ const TemplateSection: React.FC<{
       />
 
       <SettingsItem
-        name="Section Optional"
-        description='Marks the section as optional - for example "Ask Scribe"'
+        name="部分可选"
+        description='将部分标记为可选 - 例如"询问Scribe"'
         control={
           <input
             disabled={isTemplateLocked}
@@ -164,8 +164,8 @@ const TemplateSection: React.FC<{
       />
 
       <SettingsItem
-        name="Section Output Prefix"
-        description="Prefix for the section output - this is useful for code blocks"
+        name="部分输出前缀"
+        description="部分输出的前缀 - 这对代码块很有用"
         control={
           <input
             disabled={isTemplateLocked}
@@ -182,8 +182,8 @@ const TemplateSection: React.FC<{
       />
 
       <SettingsItem
-        name="Section Output Postfix"
-        description="Postfix for the section output - this is useful for codeblocks"
+        name="部分输出后缀"
+        description="部分输出的后缀 - 这对代码块很有用"
         control={
           <input
             disabled={isTemplateLocked}
@@ -200,7 +200,7 @@ const TemplateSection: React.FC<{
       />
 
       <button type="button" onClick={removeSection} disabled={isTemplateLocked}>
-        Remove Section
+        移除部分
       </button>
 
       <hr />
@@ -224,8 +224,8 @@ const TemplateControls: React.FC<{
   return (
     <>
       <SettingsItem
-        name="Active Template"
-        description="Select the active note template - this will be auto selected in the modal"
+        name="活动模板"
+        description="选择活动笔记模板 - 这将在模态框中自动选择"
         control={
           <select
             value={activeTemplate.name}
@@ -243,7 +243,7 @@ const TemplateControls: React.FC<{
             {noteTemplates.map((template) => (
               <option key={template.name} value={template.name}>
                 {template.name}{' '}
-                {template.name === DEFAULT_TEMPLATE.name ? '(Locked)' : ''}
+                {template.name === DEFAULT_TEMPLATE.name ? '(已锁定)' : ''}
               </option>
             ))}
           </select>
@@ -262,7 +262,7 @@ const TemplateControls: React.FC<{
           setActiveTemplate(newTemplate);
         }}
       >
-        New Template
+        新建模板
       </button>
 
       <button
@@ -277,7 +277,7 @@ const TemplateControls: React.FC<{
           setActiveTemplate(clonedTemplate);
         }}
       >
-        Clone Template
+        克隆模板
       </button>
 
       <button
@@ -292,12 +292,12 @@ const TemplateControls: React.FC<{
           setActiveTemplate(updatedTemplates[0]);
         }}
       >
-        Remove Active Template
+        移除活动模板
       </button>
 
       <SettingsItem
-        name="Template Name"
-        description="Change the name of the active template"
+        name="模板名称"
+        description="更改活动模板的名称"
         control={
           <input
             disabled={isTemplateLocked}
@@ -329,8 +329,8 @@ const TemplateControls: React.FC<{
         onClick={() => {
           const newSection: TemplateSection = {
             id: Math.random().toString(36).substring(2, 9),
-            sectionHeader: 'New Section',
-            sectionInstructions: 'New Section Instructions',
+            sectionHeader: '新部分',
+            sectionInstructions: '新部分说明',
           };
 
           const updatedTemplate = {
@@ -349,7 +349,7 @@ const TemplateControls: React.FC<{
           setNoteTemplates(updatedTemplates);
         }}
       >
-        Add New Section
+        添加新部分
       </button>
       <hr />
     </>
@@ -376,7 +376,7 @@ export const NoteTemplateSettings: React.FC<{
 
   return (
     <div>
-      <h2>Templates</h2>
+      <h2>模板</h2>
       <TemplateControls
         noteTemplates={noteTemplates}
         activeTemplate={activeTemplate}
