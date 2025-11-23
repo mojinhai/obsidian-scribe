@@ -6,7 +6,7 @@ export function handleRibbon(plugin: ScribePlugin) {
   // This creates an icon in the left ribbon.
   const ribbonIconEl = plugin.addRibbonIcon(
     'mic-vocal',
-    'Scribe',
+    '抄写员',
     (evt: MouseEvent) => {
       scribeDropDownMenu(plugin).showAtMouseEvent(evt);
     },
@@ -24,14 +24,14 @@ function scribeDropDownMenu(plugin: ScribePlugin): Menu {
   if (showRecordingInProgressControls) {
     menu.addItem((item) => {
       item.setIcon('trash-2');
-      item.setTitle('Cancel Recording');
+      item.setTitle('取消录音');
       item.onClick(() => {
         plugin.cancelRecording();
       });
     });
     menu.addItem((item) => {
       item.setIcon('save');
-      item.setTitle('Stop Recording');
+      item.setTitle('停止录音');
       item.onClick(() => {
         plugin.scribe();
       });
@@ -39,7 +39,7 @@ function scribeDropDownMenu(plugin: ScribePlugin): Menu {
   } else {
     menu.addItem((item) => {
       item.setIcon('joystick');
-      item.setTitle('Open Controls');
+      item.setTitle('打开控制面板');
       item.onClick(() => {
         plugin.state.isOpen = true;
         plugin.controlModal.open();
@@ -47,7 +47,7 @@ function scribeDropDownMenu(plugin: ScribePlugin): Menu {
     });
     menu.addItem((item) => {
       item.setIcon('mic-vocal');
-      item.setTitle('Start Recording');
+      item.setTitle('开始录音');
       item.onClick(() => {
         plugin.startRecording();
       });
