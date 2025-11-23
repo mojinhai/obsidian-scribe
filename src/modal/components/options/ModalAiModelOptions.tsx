@@ -27,7 +27,7 @@ export function ModalAiModelOptions({
   return (
     <div className="scribe-recording-options">
       <SettingsItem
-        name="LLM model"
+        name="LLM 模型"
         description=""
         control={
           <select
@@ -49,7 +49,7 @@ export function ModalAiModelOptions({
       />
 
       <SettingsItem
-        name="Transcript platform"
+        name="转录平台"
         description=""
         control={
           <select
