@@ -28,7 +28,7 @@ export function ModalOptionsContainer({
 
   return (
     <div>
-      <p>Session settings</p>
+      <p>会话设置</p>
       <div className="scribe-options-container">
         <ModalRecordingOptions
           options={options}
@@ -42,7 +42,7 @@ export function ModalOptionsContainer({
         type="button"
         className="scribe-settings-btn"
       >
-        Language options
+        语言选项
       </button>
 
       <button
@@ -50,17 +50,17 @@ export function ModalOptionsContainer({
         type="button"
         className="scribe-settings-btn"
       >
-        Model options
+        模型选项
       </button>
       {isLanguageOptionsExpanded && (
         <>
-          <h5>Language options</h5>
+          <h5>语言选项</h5>
           <ModalLanguageOptions options={options} setOptions={setOptions} />
         </>
       )}
       {isModelOptionsExpanded && (
         <>
-          <h5>AI model options</h5>
+          <h5>AI 模型选项</h5>
           <ModalAiModelOptions options={options} setOptions={setOptions} />
         </>
       )}
