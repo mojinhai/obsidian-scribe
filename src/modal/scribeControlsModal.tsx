@@ -113,13 +113,13 @@ const ScribeModal: React.FC<{ plugin: ScribePlugin }> = ({ plugin }) => {
       {!hasOpenAiApiKey && (
         <div className="scribe-settings-warning-container">
           <h1>
-            ️<CircleAlert /> Missing Open AI API key
+            ️<CircleAlert /> 缺少 OpenAI API 密钥
           </h1>
           <h2 className="scribe-settings-warning">
-            Please enter the key in the plugin settings.
+            请在插件设置中输入密钥。
           </h2>
-          <p>You can get your API key here</p>
-          <a href="https://platform.openai.com/settings">OpenAI Platform</a>
+          <p>您可以在此处获取您的 API 密钥</p>
+          <a href="https://platform.openai.com/settings">OpenAI 平台</a>
         </div>
       )}
       {hasOpenAiApiKey && (
