@@ -73,10 +73,10 @@ export const AiModelSettings: React.FC<{
 
   return (
     <div>
-      <h2>AI model options</h2>
+      <h2>AI 模型选项</h2>
       <SettingsItem
-        name="Transcript platform"
-        description="Your recording is uploaded to this service"
+        name="转录平台"
+        description="您的录音将上传到此服务"
         control={
           <select
             defaultValue={transcriptPlatform}
@@ -88,7 +88,7 @@ export const AiModelSettings: React.FC<{
               saveSettings();
             }}
           >
-            <option value={TRANSCRIPT_PLATFORM.openAi}>OpenAi</option>
+            <option value={TRANSCRIPT_PLATFORM.openAi}>OpenAI</option>
             <option value={TRANSCRIPT_PLATFORM.assemblyAi}>AssemblyAI</option>
           </select>
         }
@@ -96,8 +96,8 @@ export const AiModelSettings: React.FC<{
 
       {transcriptPlatform === TRANSCRIPT_PLATFORM.assemblyAi && (
         <SettingsItem
-          name="Multi-speaker enabled"
-          description="Enable this if you have multiple speakers in your recording"
+          name="启用多说话人"
+          description="如果您的录音中有多个说话人，请启用此选项"
           control={
             <div
               className={`checkbox-container ${isMultiSpeakerEnabled ? 'is-enabled' : ''}`}
@@ -121,8 +121,8 @@ export const AiModelSettings: React.FC<{
       )}
 
       <SettingsItem
-        name="LLM model for creating the summary"
-        description="The transcript is sent to this service"
+        name="用于创建摘要的LLM模型"
+        description="转录将发送到此服务"
         control={
           <select
             defaultValue={llmModel}
@@ -143,10 +143,10 @@ export const AiModelSettings: React.FC<{
         }
       />
 
-      <h3>Custom OpenAI Configuration</h3>
+      <h3>自定义OpenAI配置</h3>
       <SettingsItem
-        name="Use custom OpenAI base URL"
-        description="Enable this to use a custom OpenAI-compatible API endpoint (e.g., local LLM server, Azure OpenAI, etc.)"
+        name="使用自定义OpenAI基础URL"
+        description="启用此选项以使用自定义的OpenAI兼容API端点（例如，本地LLM服务器、Azure OpenAI等）"
         control={
           <div
             className={`checkbox-container ${useCustomOpenAiBaseUrl ? 'is-enabled' : ''}`}
@@ -171,8 +171,8 @@ export const AiModelSettings: React.FC<{
       {useCustomOpenAiBaseUrl && (
         <>
           <SettingsItem
-            name="Custom OpenAI base URL"
-            description="The base URL for your custom OpenAI-compatible API (e.g., http://localhost:1234/v1, https://your-instance.openai.azure.com/)"
+            name="自定义OpenAI基础URL"
+            description="您的自定义OpenAI兼容API的基础URL（例如，http://localhost:1234/v1, https://your-instance.openai.azure.com/）"
             control={
               <input
                 type="text"
@@ -187,8 +187,8 @@ export const AiModelSettings: React.FC<{
           />
 
           <SettingsItem
-            name="Custom transcription model"
-            description="The model name to use for audio transcription (e.g., whisper-1, faster-whisper, etc.)"
+            name="自定义转录模型"
+            description="用于音频转录的模型名称（例如，whisper-1, faster-whisper等）"
             control={
               <input
                 type="text"
@@ -203,8 +203,8 @@ export const AiModelSettings: React.FC<{
           />
 
           <SettingsItem
-            name="Custom chat model"
-            description="The model name to use for chat/summarization (e.g., gpt-4, llama-3.1-8b-instruct, etc.)"
+            name="自定义聊天模型"
+            description="用于聊天/摘要的模型名称（例如，gpt-4, llama-3.1-8b-instruct等）"
             control={
               <input
                 type="text"
