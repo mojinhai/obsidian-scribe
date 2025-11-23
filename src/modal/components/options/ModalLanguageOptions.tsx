@@ -25,7 +25,7 @@ export function ModalLanguageOptions({
   return (
     <div className="scribe-recording-options">
       <SettingsItem
-        name="Spoken language"
+        name="口语语言"
         description=""
         control={
           <select
@@ -47,7 +47,7 @@ export function ModalLanguageOptions({
       />
 
       <SettingsItem
-        name="Scribe output language"
+        name="抄写员输出语言"
         description=""
         control={
           <select
